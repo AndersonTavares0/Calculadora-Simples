@@ -1,0 +1,101 @@
+body {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  transition: background 0.3s;
+}
+
+.calculator-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.calculator {
+  background: #232526;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  padding: 30px 25px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.display {
+  background: #111;
+  color: #74ebd5;
+  font-size: 1.3em;
+  border-radius: 10px;
+  padding: 18px 15px;
+  text-align: right;
+  margin-bottom: 10px;
+  min-height: 50px;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s, color 0.3s;
+  font-family: "Consolas", "Segoe UI", Arial, sans-serif;
+}
+
+.history {
+  background: rgba(255, 255, 255, 0.04);
+  color: #b8c6db;
+  font-size: 1em;
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-height: 24px;
+  margin-bottom: 8px;
+  text-align: right;
+  max-height: 40px;
+  overflow-y: auto;
+  font-family: "Consolas", "Segoe UI", Arial, sans-serif;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn {
+  background: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3em;
+  padding: 18px 0;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 500;
+  color: #74ebd5;
+}
+
+.btn:active {
+  background: #222;
+}
+
+.btn.equal {
+  background: #74ebd5;
+  color: #232526;
+  grid-row: span 2;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-radius: 12px;
+}
+
+.btn.zero {
+  grid-column: span 2;
+  border-radius: 12px;
+}
+
+.btn:hover {
+  background: #222;
+}
